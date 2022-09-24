@@ -2,26 +2,45 @@
 const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
 
 const newSneakers = (sneakers) => {
-    return "New sneakers " + sneakers + " dropping soon!";
+  return "New sneakers" + sneakers + " dropping soon!";
 };
 
 const isThatMichaelJordan = (name) => {
-    return "MICHAEL JORDAN" == name.toUpperCase()
+  return "MICHAEL JORDAN" == name.toUpperCase()
+
 };
 
 const areYouM = (name) => {
-    if (name.charAt(0) == "M") {
-      return true;
-    }
-    return false;
+  if (name.charAt(0) == "M") {
+    return true;
+  }
+  return false;
 };
 
 const mostViewsThreeSneakers = (sneakerOneViews, sneakerTwoViews, sneakerThreeViews) => {
-  // insert code
+
+  if (sneakerOneViews > sneakerTwoViews && sneakerOneViews > sneakerThreeViews) {
+    return sneakerOneViews;
+  }
+  else if (sneakerTwoViews > sneakerOneViews & sneakerTwoViews > sneakerThreeViews) {
+    return sneakerTwoViews;
+  }
+  else {
+    return sneakerThreeViews;
+  }
 };
 
 const mostViews = (sneakerViews) => {
-  // insert code
+  let max = 0
+  for (let i = 0; i < sneakerViews.length; i++) {
+    if (sneakerViews[i] > max) {
+      max = sneakerViews[i]
+
+    }
+
+  }
+  return max
+
 };
 
 const validateEmail = (email) => {
