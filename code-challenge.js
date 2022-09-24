@@ -2,27 +2,18 @@
 const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
 
 const newSneakers = (sneakers) => {
-    return "New sneakers" + sneakers + "dropping soon!";
+    return "New sneakers " + sneakers + " dropping soon!";
 };
 
 const isThatMichaelJordan = (name) => {
-  function isThatMichaelJordan(MichaelJordan) {
-
-    //if ( "MICHAEL JORDAN" == MichaelJordan.toUpperCase() ){
-    return "MICHAEL JORDAN" == MichaelJordan.toUpperCase()
-
-  }
+    return "MICHAEL JORDAN" == name.toUpperCase()
 };
 
 const areYouM = (name) => {
-  function areYouM(M) {
-    if (M.charAt(0) == "M") {
+    if (name.charAt(0) == "M") {
       return true;
     }
     return false;
-  }
-  console.log(areYouM("Micheal Jordan"));
-  console.log(areYouM("Picheal Fordan"));
 };
 
 const mostViewsThreeSneakers = (sneakerOneViews, sneakerTwoViews, sneakerThreeViews) => {
