@@ -50,15 +50,12 @@ const mostViews = (sneakerViews) => {
   //   }
   // }
   // return max
-  const mostViews = (sneakerViews) => {
     for(let i = 0; i < arr.length;i++){
       if(arr[i] > biggestNum){
         biggestNum = arr[i]
       }
     }
     return biggestNum
-  };
-
 };
 
 const validateEmail = (email) => {
