@@ -3,7 +3,7 @@ const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
 
 const newSneakers = (sneakers) => {
   function newSneakers(name) {
-    console.log("New sneakers " + name + " dropping soon!");
+    return "New sneakers" + name + "dropping soon!";
   }
 };
 
