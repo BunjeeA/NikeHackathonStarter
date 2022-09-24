@@ -4,20 +4,27 @@ const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
 const newSneakers = (sneakers) => {
   function newSneakers(name) {
     console.log("New sneakers " + name + " dropping soon!");
-}
+  }
 };
 
 const isThatMichaelJordan = (name) => {
   function isThatMichaelJordan(MichaelJordan) {
 
-  //if ( "MICHAEL JORDAN" == MichaelJordan.toUpperCase() ){
-  return "MICHAEL JORDAN" == MichaelJordan.toUpperCase() 
- 
+    //if ( "MICHAEL JORDAN" == MichaelJordan.toUpperCase() ){
+    return "MICHAEL JORDAN" == MichaelJordan.toUpperCase()
+
   }
 };
 
 const areYouM = (name) => {
-  // insert code
+  function areYouM(M) {
+    if (M.charAt(0) == "M") {
+      return true;
+    }
+    return false;
+  }
+  console.log(areYouM("Micheal Jordan"));
+  console.log(areYouM("Picheal Fordan"));
 };
 
 const mostViewsThreeSneakers = (sneakerOneViews, sneakerTwoViews, sneakerThreeViews) => {
