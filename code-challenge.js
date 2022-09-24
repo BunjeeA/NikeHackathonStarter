@@ -54,11 +54,45 @@ const validateEmail = (email) => {
 };
 
 const validateEmailWithError = (email) => {
-  
+    if (email.includes("@")){
+      if(email.indexOf("@") !== 0){
+        if((email.substring(email.length - 4) === ".com") || (email.substring(email.length - 4) === ".edu") || (email.substring(email.length - 4) === ".net") || (email.substring(email.length - 4) === ".org")){
+          return "Valid email"
+        }
+        return 'Invalid email: email address should end with .com, .edu, .net, or .org'
+        
+      }
+      return 'Invalid email: missing recipient name'
+      
+    }
+    return "Invalid email: missing @ symbol"
 };
 
 const getInitials = (name) => {
-  // insert code
+//   function getInitials(name){
+//     let NameArray = name.split(" ")
+//     return NameArray[0][0] + NameArray[1][0]
+// }
+
+// function getInitials(name){
+//   let NameArray = name.split(" ")
+//   if (NameArray.length > 1){
+//       return NameArray[0][0] + NameArray[1][0]
+//   } else {
+//       return name.substring(0,2).toUpperCase()
+//   }
+// }
+
+  let NameArray = name.split(" ")
+  if (NameArray.length > 1){
+      let initials = ""
+      for(let i = 0; i < NameArray.length; i++){
+          initials += NameArray[i][0]
+      }
+      return initials
+  } else {
+      return name.substring(0,2).toUpperCase()
+  }
 };
 
 const howRepetitiveAreYou = (str, word) => {
