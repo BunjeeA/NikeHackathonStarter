@@ -2,7 +2,7 @@
 const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
 
 const newSneakers = (sneakers) => {
-  return "New sneakers" + sneakers + " dropping soon!";
+  return "New sneakers " + sneakers + " dropping soon!";
 };
 
 const isThatMichaelJordan = (name) => {
@@ -35,20 +35,26 @@ const mostViews = (sneakerViews) => {
   for (let i = 0; i < sneakerViews.length; i++) {
     if (sneakerViews[i] > max) {
       max = sneakerViews[i]
-
     }
-
   }
   return max
-
 };
 
 const validateEmail = (email) => {
-  // insert code
+    if (email.includes("@")){
+      if(email.indexOf("@") !== 0){
+        if((email.substring(email.length - 4) === ".com") || (email.substring(email.length - 4) === ".edu") || (email.substring(email.length - 4) === ".net") || (email.substring(email.length - 4) === ".org")){
+          return "Valid email"
+        }
+        
+      }
+      
+    }
+    return "Invalid email"
 };
 
 const validateEmailWithError = (email) => {
-  // insert code
+  
 };
 
 const getInitials = (name) => {
