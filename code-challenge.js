@@ -2,11 +2,18 @@
 const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
 
 const newSneakers = (sneakers) => {
-  // insert code
+  function newSneakers(name) {
+    console.log("New sneakers " + name + " dropping soon!");
+}
 };
 
 const isThatMichaelJordan = (name) => {
-  // insert code
+  function isThatMichaelJordan(MichaelJordan) {
+
+  //if ( "MICHAEL JORDAN" == MichaelJordan.toUpperCase() ){
+  return "MICHAEL JORDAN" == MichaelJordan.toUpperCase() 
+ 
+  }
 };
 
 const areYouM = (name) => {
