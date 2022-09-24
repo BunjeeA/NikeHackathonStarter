@@ -2,9 +2,7 @@
 const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
 
 const newSneakers = (sneakers) => {
-  function newSneakers(name) {
-    return "New sneakers" + name + "dropping soon!";
-  }
+    return "New sneakers" + sneakers + "dropping soon!";
 };
 
 const isThatMichaelJordan = (name) => {
